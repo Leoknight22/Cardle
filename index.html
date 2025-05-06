@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Database Auto-caricato</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>Dati dal file database.txt</h1>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Modello</th>
+        <th>Tipo</th>
+        <th>Anno</th>
+        <th>Nazionalità</th>
+        <th>Cavalli</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const txtURL = 'https://raw.githubusercontent.com/Leoknight22/Cardle/refs/heads/main/test.txt'; // ← cambia con il tuo URL raw
+
+    fetch(txtURL)
+      .then(response => {
+        if (!response.ok) throw new Error('Errore nel caricamento del file');
+        return response.text();
+      })
+      .then(text => {
+        const entries = text.split(';').filter(line => line.trim() !== '');
+        const tbody = document.querySelector('#dataTable tbody');
+        entries.forEach(entry => {
+          const campi = entry.split(',').map(e => e.trim());
+          if (campi.length === 6) {
+            const [marca, modello, tipo, anno, nazionalità, cavalli] = campi;
+            const row = `
+              <tr>
+                <td>${marca}</td>
+                <td>${modello}</td>
+                <td>${tipo}</td>
+                <td>${anno}</td>
+                <td>${nazionalità}</td>
+                <td>${cavalli}</td>
+              </tr>`;
+            tbody.innerHTML += row;
+          }
+        });
+      })
+      .catch(err => {
+        console.error('Errore:', err);
+      });
+  </script>
+</body>
+</html>
