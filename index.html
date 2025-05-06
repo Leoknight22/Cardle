@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardle</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    input { padding: 8px; margin: 5px; width: 200px; }
+    button { padding: 8px 12px; }
+    .result-row { display: flex; margin-top: 10px; }
+    .cell {
+      flex: 1; padding: 8px; margin: 2px;
+      text-align: center;
+      background-color: #ccc; color: #fff;
+      border-radius: 5px;
+    }
+    .correct { background-color: green; }
+    .arrow { margin-left: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Cardle - Indovina l'auto</h1>
+  <div>
+    <input list="marche" id="inputMarca" placeholder="Marca">
+    <input list="modelli" id="inputModello" placeholder="Modello">
+    <button onclick="provaTentativo()">Indovina</button>
+  </div>
+  <datalist id="marche"></datalist>
+  <datalist id="modelli"></datalist>
+
+  <div id="tentativi"></div>
+
+  <script>
+    const txtURL = 'https://raw.githubusercontent.com/Leoknight22/Cardle/refs/heads/main/test.txt';
+    let database = [];
+    let risposta = null;
+
+    fetch(txtURL)
+      .then(res => res.ok ? res.text() : Promise.reject("Errore nel caricamento"))
+      .then(text => {
+        const righe = text.split(';').filter(r => r.trim() !== '');
+        const marcheSet = new Set();
+        const modelliSet = new Set();
+
+        database = righe.map(riga => {
+          const [marca, modello, tipo, anno, nazionalità, cavalli] = riga.split(',').map(e => e.trim());
+          marcheSet.add(marca);
+          modelliSet.add(modello);
+          return { marca, modello, tipo, anno: parseInt(anno), nazionalità, cavalli: parseInt(cavalli) };
+        });
+
+        // Riempie datalist
+        document.getElementById('marche').innerHTML = [...marcheSet].map(m => `<option value="${m}">`).join('');
+        document.getElementById('modelli').innerHTML = [...modelliSet].map(m => `<option value="${m}">`).join('');
+
+        // Scegli auto casuale
+        risposta = database[Math.floor(Math.random() * database.length)];
+        console.log("Auto da indovinare:", risposta);
+      });
+
+    function provaTentativo() {
+      const marca = document.getElementById('inputMarca').value.trim();
+      const modello = document.getElementById('inputModello').value.trim();
+      const trovato = database.find(auto => auto.marca.toLowerCase() === marca.toLowerCase() && auto.modello.toLowerCase() === modello.toLowerCase());
+
+      if (!trovato) {
+        alert("Modello non trovato nel database.");
+        return;
+      }
+
+      mostraTentativo(trovato);
+      document.getElementById('inputMarca').value = '';
+      document.getElementById('inputModello').value = '';
+    }
+
+    function mostraTentativo(auto) {
+      const container = document.getElementById('tentativi');
+      const div = document.createElement('div');
+      div.className = 'result-row';
+
+      div.appendChild(creaCella(auto.marca, auto.marca === risposta.marca));
+      div.appendChild(creaCella(auto.modello, auto.modello === risposta.modello));
+      div.appendChild(creaCella(auto.tipo, auto.tipo === risposta.tipo));
+      div.appendChild(creaCella(auto.anno, auto.anno === risposta.anno, 'anno'));
+      div.appendChild(creaCella(auto.nazionalità, auto.nazionalità === risposta.nazionalità));
+      div.appendChild(creaCella(auto.cavalli, auto.cavalli === risposta.cavalli, 'cavalli'));
+
+      container.appendChild(div);
+    }
+
+    function creaCella(valore, corretto, tipo = '') {
+      const cella = document.createElement('div');
+      cella.className = 'cell' + (corretto ? ' correct' : '');
+      cella.textContent = valore;
+
+      if (!corretto && (tipo === 'anno' || tipo === 'cavalli')) {
+        const freccia = document.createElement('span');
+        freccia.className = 'arrow';
+        freccia.textContent = (valore < risposta[tipo]) ? '↑' : '↓';
+        cella.appendChild(freccia);
+      }
+
+      return cella;
+    }
+  </script>
+</body>
+</html>
