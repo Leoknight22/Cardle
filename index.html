@@ -50,8 +50,21 @@
         });
 
         // Riempie datalist
-        document.getElementById('marche').innerHTML = [...marcheSet].map(m => `<option value="${m}">`).join('');
-        document.getElementById('modelli').innerHTML = [...modelliSet].map(m => `<option value="${m}">`).join('');
+        const inputMarca = document.getElementById('inputMarca');
+        const datalistMarche = document.getElementById('marche');
+        const datalistModelli = document.getElementById('modelli');
+
+        datalistMarche.innerHTML = [...marcheSet].map(m => `<option value="${m}">`).join('');
+
+        inputMarca.addEventListener('input', () => {
+          const marcaInserita = inputMarca.value.toLowerCase();
+          const modelliFiltrati = database
+          .filter(auto => auto.marca.toLowerCase() === marcaInserita)
+          .map(auto => auto.modello);
+
+        const modelliUnici = [...new Set(modelliFiltrati)];
+        datalistModelli.innerHTML = modelliUnici.map(m => `<option value="${m}">`).join('');
+        });
 
         // Scegli auto casuale
         risposta = database[Math.floor(Math.random() * database.length)];
