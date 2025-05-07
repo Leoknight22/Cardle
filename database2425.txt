@@ -1,7 +1,7 @@
 Alfa Romeo,Giulia,berlina,2016,Italia,160,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2017_Alfa_Romeo_Giulia_V6_Biturbo_Quadrifoglio_2.9.jpg/1280px-2017_Alfa_Romeo_Giulia_V6_Biturbo_Quadrifoglio_2.9.jpg; 
 Alfa Romeo,Stelvio,SUV,2017,Italia,160,https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/2017_Alfa_Romeo_Stelvio_Milano_Edizione_TD_Automatic_2.1.jpg/1280px-2017_Alfa_Romeo_Stelvio_Milano_Edizione_TD_Automatic_2.1.jpg; 
 Alfa Romeo,Tonale,SUV,2022,Italia,160,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Alfa_Romeo_Tonale_1X7A6029.jpg/1280px-Alfa_Romeo_Tonale_1X7A6029.jpg; 
-Alfa Romeo,Junior,berlina compatta,2024,Italia,156,https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Alfa_Romeo_Junior_%28cropped%29.jpg/1280px-Alfa_Romeo_Junior_%28cropped%29.jpg; 
+Alfa Romeo,Junior,crossover,2024,Italia,156,https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Alfa_Romeo_Junior_%28cropped%29.jpg/1280px-Alfa_Romeo_Junior_%28cropped%29.jpg; 
 Alfa Romeo,33 Stradale,hypercar,2024,Italia,620,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/33_Stradale_exposed_for_medias_%28resized%29.jpg/1280px-33_Stradale_exposed_for_medias_%28resized%29.jpg;
 Ferrari,SF90 Stradale,berlinetta,2019,Italia,1000,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ferrari_SF90_Spider_DSC_6998.jpg/1280px-Ferrari_SF90_Spider_DSC_6998.jpg;
 Ferrari,Roma,grand tourer,2020,Italia,620,https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ferrari_Roma_IMG_9620_%28cropped%29.jpg/1280px-Ferrari_Roma_IMG_9620_%28cropped%29.jpg;
