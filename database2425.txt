@@ -1,7 +1,7 @@
-Ferrari,SF90 Stradale,berlinetta,2019,Italia,1000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ferrari_SF90_Stradale_IMG_20201011_112208.jpg/320px-Ferrari_SF90_Stradale_IMG_20201011_112208.jpg;
-Ferrari,Roma,grand tourer,2020,Italia,620,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Ferrari_Roma_IMG_20200920_113456.jpg/320px-Ferrari_Roma_IMG_20200920_113456.jpg;
-Ferrari,296 GTB,berlinetta,2021,Italia,830,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Ferrari_296_GTB_IMG_20220315_101234.jpg/320px-Ferrari_296_GTB_IMG_20220315_101234.jpg;
-Ferrari,Daytona SP3,berlinetta,2022,Italia,840,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Ferrari_Daytona_SP3_IMG_20221112_104512.jpg/320px-Ferrari_Daytona_SP3_IMG_20221112_104512.jpg;
-Ferrari,Purosangue,SUV,2023,Italia,725,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ferrari_Purosangue_IMG_20230910_120345.jpg/320px-Ferrari_Purosangue_IMG_20230910_120345.jpg;
-Ferrari,12Cilindri,grand tourer,2024,Italia,830,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ferrari_12Cilindri_IMG_20240502_090000.jpg/320px-Ferrari_12Cilindri_IMG_20240502_090000.jpg;
-Ferrari,F80,hypercar,2024,Italia,1200,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Ferrari_F80_IMG_20241017_143000.jpg/320px-Ferrari_F80_IMG_20241017_143000.jpg;
+Ferrari,SF90 Stradale,berlinetta,2019,Italia,1000,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ferrari_SF90_Spider_DSC_6998.jpg/1280px-Ferrari_SF90_Spider_DSC_6998.jpg;
+Ferrari,Roma,grand tourer,2020,Italia,620,https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Ferrari_Roma_IMG_9620_%28cropped%29.jpg/1280px-Ferrari_Roma_IMG_9620_%28cropped%29.jpg;
+Ferrari,296 GTB,berlinetta,2021,Italia,830,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Ferrari_296_GTB_1X7A6377.jpg/1280px-Ferrari_296_GTB_1X7A6377.jpg;
+Ferrari,Daytona SP3,berlinetta,2022,Italia,840,https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Ferrari_Daytona_SP3_front_side_at_CF_2022_%28cropped%29.jpg/1280px-Ferrari_Daytona_SP3_front_side_at_CF_2022_%28cropped%29.jpg;
+Ferrari,Purosangue,SUV,2023,Italia,725,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Ferrari_Purosangue_DSC_7777.jpg/1280px-Ferrari_Purosangue_DSC_7777.jpg;
+Ferrari,12Cilindri,grand tourer,2024,Italia,830,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ferrari_12Cilindri_Spider_Auto_Zuerich_2024_DSC_6810.jpg/1280px-Ferrari_12Cilindri_Spider_Auto_Zuerich_2024_DSC_6810.jpg;
+Ferrari,F80,hypercar,2024,Italia,1200,https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/FerrariF80_%28resized%29_%282%29.jpg/1280px-FerrariF80_%28resized%29_%282%29.jpg;
